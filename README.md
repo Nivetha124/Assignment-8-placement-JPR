@@ -21,3 +21,22 @@ n = len(arr)
 k=0
 Ans = largest(arr, n)
 print("Largest in given array ", Ans)
+
+# 3. From the array , count the number of elements to be added to make the sum at least X. The elements to be added should be positive even numbers only. i/P  13 N 23,28,-50,24,12,5,40,-7,-12,68,7,11,9 elements 100 X
+Output: 4
+Explaination:28 +24+12+40 = 104 hence 4 elements to be added to make sum up to 100
+
+def evennumber(arr1,n,x):
+    even=0
+    for i in arr1:
+        if i>0 and i%2==0:
+            even+=i
+    y=even-x
+    print(y)
+arr1 = [23,28,-50,24,12,5,40,-7,-12,68,7,11,9]
+n = len(arr1)
+x=100
+evennumber(arr1, n, x)
+
+
+
