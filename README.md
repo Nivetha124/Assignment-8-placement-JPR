@@ -38,5 +38,45 @@ n = len(arr1)
 x=100
 evennumber(arr1, n, x)
 
+# 4.Count the number of times the minimum value is present in the array. Display minimum value and no of times. 
+I/P
+6
+12 ,55, 18 , 55, 50,12
+O/P
+12 2
+def find(xlst):
+    smallest = min(xlst)
+    count = xlst.count(smallest)
+    print(f"The smallest number is {smallest}, it occurs {count} times.")
+    return smallest, count
+xlst=[12 ,55, 18 , 55, 50,12]
+find(xlst)
+
+
+# 5. Sum the first X negative numbers in array
+I/P
+8
+12, 34, -12, 30, -6, -8, 8, -10
+3
+O/P: -26
+
+a=[]
+n=int(input("enter the length of the array"))
+for i in range(n):
+    x=int(input("enter the next value"))
+    a.append(x)
+y=int(input("enter the limited value added in the list"))
+sum=0
+count=0
+for i in a:
+    if i<0:
+        sum+=i
+        count+=1
+        if count==y:
+            break
+print(sum)
+
+
+
 
 
